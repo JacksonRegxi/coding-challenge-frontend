@@ -9,7 +9,7 @@ import NotFound from "../components/core/NotFound.vue";
 
 const router = createRouter({
     end: undefined, sensitive: undefined, strict: undefined,
-    history: createWebHistory("/"),
+    history: createWebHistory(),
     routes: [
         {
             path: '/',
@@ -28,17 +28,17 @@ const router = createRouter({
         },
         {
             path: '/loan-form',
-            name: 'Movies Page',
+            name: 'Loan Form',
             component: LoanForm
         },
         {
             path: '/return-movie-form',
-            name: 'Movies Page',
+            name: 'Return Movie Form',
             component: ReturnMovieForm
         },
         {
             path: '/customers',
-            name: 'Movies Page',
+            name: 'Customers',
             component: CustomerPage
         },
         {
