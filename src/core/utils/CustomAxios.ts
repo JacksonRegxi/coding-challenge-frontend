@@ -8,19 +8,14 @@ export interface InternalAxiosRequestConfig<D = any> extends AxiosRequestConfig<
 class CustomAxios {
     private axiosInstance: AxiosInstance;
 
-    constructor({ token, userId }: { token?: string | null, userId?: string | null }) {
+    constructor() {
         this.axiosInstance = axios.create({
-            baseURL: "./",
+            baseURL: "http://localhost:9999/",
             timeout: 5000,
         });
 
         this.axiosInstance.interceptors.request.use(
             (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
-                // Add any request headers or other configurations here
-                if (token) {
-                    config.headers['Authorization'] = `Bearer ${token}`;
-                    config.headers['user-id'] = userId;
-                }
                 return config;
             },
             (error) => {

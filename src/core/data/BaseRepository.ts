@@ -1,6 +1,6 @@
-import CustomAxios from "../utils/custom-axios";
+import CustomAxios from "../utils/CustomAxios";
 import {AxiosError} from "axios";
-import {DataError} from "../domain/data-error";
+import {DataError} from "../domain/DataError";
 
 export class BaseRepository {
     public axios;
