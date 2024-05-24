@@ -1,7 +1,8 @@
-import {IMoviesRepository} from "../repository/IMoviesRepository";
-import {Either} from "../../core/domain/Either";
-import {DataError} from "../../core/domain/DataError";
-import {Movie} from "../entities/movie";
+import {IMoviesRepository} from "../../repository/IMoviesRepository.ts";
+import {Either} from "../../../core/domain/Either.ts";
+import {DataError} from "../../../core/domain/DataError.ts";
+import {Movie} from "../../entities/movie";
+
 
 export class FetchMoviesUseCase {
     private moviesRepository: IMoviesRepository;

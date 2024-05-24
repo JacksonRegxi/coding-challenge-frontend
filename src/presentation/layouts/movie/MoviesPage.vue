@@ -18,7 +18,7 @@ onMounted(() => {
       <a href="#">
         <img :src="(movie.image)" :alt="(movie.title)" class="h-80 w-72 object-cover rounded-t-xl">
         <div class="px-4 py-3 w-72">
-          <div v-if="movie.available === 1"
+          <div v-if="movie.available === '1'"
               class="flex px-2 py-1 font-san w-fit text-xs font-bold text-white bg-green-800 rounded-md select-none whitespace-nowrap align-middle items-center">
             <span class="">Disponible</span>
           </div>

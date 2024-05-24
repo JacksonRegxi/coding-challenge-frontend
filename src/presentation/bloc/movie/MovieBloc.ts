@@ -1,9 +1,9 @@
 import {MovieStore} from "./MovieState";
 import {Router} from "vue-router";
 import {Ploc} from "../../../core/Ploc.ts";
-import {FetchMoviesUseCase} from "../../../domain/uses-cases/FetchMovies.ts";
-import {StoreMovieUseCase} from "../../../domain/uses-cases/StoreMovie.ts";
 import {Movie} from "../../../domain/entities/movie";
+import {StoreMovieUseCase} from "../../../domain/uses-cases/movie/StoreMovie.ts";
+import {FetchMoviesUseCase} from "../../../domain/uses-cases/movie/FetchMovies.ts";
 
 export class MovieBloc extends Ploc<MovieStore> {
 

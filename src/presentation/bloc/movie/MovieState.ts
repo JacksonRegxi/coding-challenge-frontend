@@ -6,7 +6,7 @@ const movieState = defineStore('MovieState', {
         return {
             movies: [],
             title: "",
-            available: 0,
+            available: "",
             topic: "",
             image: "",
             releaseYear: 0,

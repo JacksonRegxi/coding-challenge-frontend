@@ -4,7 +4,6 @@ import CheckBox from "../../components/shared/CheckBox.vue";
 import {ref, watch} from "vue";
 import {dependencyLocator} from "../../../core/dependicies/DependencyLocator.ts";
 import movieState from "../../bloc/movie/MovieState.ts";
-import router from "../../router/index.ts";
 import SuccessDialog from "../../components/core/SuccessDialog.vue";
 
 const checkboxValue = ref(1)
