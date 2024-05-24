@@ -1,11 +1,11 @@
 import {createRouter, createWebHistory} from "vue-router";
-import MoviesPage from "../components/core/movie/MoviesPage.vue";
-import NotFound from "../components/core/NotFound.vue";
-import NewMovieForm from "../components/core/movie/NewMovieForm.vue";
-import NewCustomerForm from "../components/core/customer/NewCustomerForm.vue";
-import LoanForm from "../components/core/loan/LoanForm.vue";
-import ReturnMovieForm from "../components/core/movie/ReturnMovieForm.vue";
-import CustomerPage from "../components/core/customer/CustomerPage.vue";
+import MoviesPage from "../layouts/movie/MoviesPage.vue";
+import NewMovieForm from "../layouts/movie/NewMovieForm.vue";
+import NewCustomerForm from "../layouts/customer/NewCustomerForm.vue";
+import LoanForm from "../layouts/loan/LoanForm.vue";
+import ReturnMovieForm from "../layouts/movie/ReturnMovieForm.vue";
+import CustomerPage from "../layouts/customer/CustomerPage.vue";
+import NotFound from "../layouts/NotFound.vue";
 
 const router = createRouter({
     end: undefined, sensitive: undefined, strict: undefined,

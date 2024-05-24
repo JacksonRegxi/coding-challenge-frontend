@@ -12,8 +12,10 @@
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "pinia": "^2.1.7",
+    "vee-validate": "^4.12.8",
     "vue": "^3.4.27",
-    "vue-router": "4"
+    "vue-router": "4",
+    "vue-validate": "^1.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

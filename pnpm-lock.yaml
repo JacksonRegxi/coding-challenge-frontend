@@ -17,12 +17,18 @@ importers:
       pinia:
         specifier: ^2.1.7
         version: 2.1.7(typescript@5.4.5)(vue@3.4.27(typescript@5.4.5))
+      vee-validate:
+        specifier: ^4.12.8
+        version: 4.12.8(vue@3.4.27(typescript@5.4.5))
       vue:
         specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.5)
       vue-router:
         specifier: '4'
         version: 4.3.2(vue@3.4.27(typescript@5.4.5))
+      vue-validate:
+        specifier: ^1.0.1
+        version: 1.0.1
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
@@ -903,6 +909,10 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
+  type-fest@4.18.2:
+    resolution: {integrity: sha512-+suCYpfJLAe4OXS6+PPXjW3urOS4IoP9waSiLuXfLgqZODKw/aWwASvzqE886wA0kQgGy0mIWyhd87VpqIy6Xg==}
+    engines: {node: '>=16'}
+
   typescript@5.4.5:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
@@ -923,6 +933,11 @@ packages:
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+
+  vee-validate@4.12.8:
+    resolution: {integrity: sha512-A07rm3+y7SRk0CMD/O4nBT0nxtwjyfzGZwjEUDk18SxK0ZMzd4AFCzzdHlIiCE1QgHetxd0I3kVkZdN0GG0Oww==}
+    peerDependencies:
+      vue: ^3.4.26
 
   vite@5.2.11:
     resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
@@ -976,6 +991,9 @@ packages:
     hasBin: true
     peerDependencies:
       typescript: '*'
+
+  vue-validate@1.0.1:
+    resolution: {integrity: sha512-VPsk0lVELlXVHSG8BBFnioQfHoInkLJWSqqFP0sdOLUmtWBZa1q+85yfqPJ5a9bSbKpZfRmyvlsrxn/YZtWMDQ==}
 
   vue@3.4.27:
     resolution: {integrity: sha512-8s/56uK6r01r1icG/aEOHqyMVxd1bkYcSe9j8HcKtr/xTOFWvnzIVTehNW+5Yt89f+DLBe4A569pnZLS5HzAMA==}
@@ -1788,6 +1806,8 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
+  type-fest@4.18.2: {}
+
   typescript@5.4.5: {}
 
   undici-types@5.26.5:
@@ -1802,6 +1822,12 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   vary@1.1.2: {}
+
+  vee-validate@4.12.8(vue@3.4.27(typescript@5.4.5)):
+    dependencies:
+      '@vue/devtools-api': 6.6.1
+      type-fest: 4.18.2
+      vue: 3.4.27(typescript@5.4.5)
 
   vite@5.2.11(@types/node@20.12.12)(terser@5.31.0):
     dependencies:
@@ -1833,6 +1859,8 @@ snapshots:
       '@vue/language-core': 2.0.19(typescript@5.4.5)
       semver: 7.6.2
       typescript: 5.4.5
+
+  vue-validate@1.0.1: {}
 
   vue@3.4.27(typescript@5.4.5):
     dependencies:
