@@ -1,6 +1,4 @@
-<script>
-import SelectComponent from "../../components/shared/SelectComponent.vue";
-import CheckBox from "../../components/shared/CheckBox.vue";
+<script lang="ts" setup>
 import {ref, watch} from "vue";
 import {dependencyLocator} from "../../../core/dependicies/DependencyLocator.ts";
 import movieState from "../../bloc/movie/MovieState.ts";
@@ -21,13 +19,6 @@ const closeModal = () => {
 
 const submitHandler = ()=>{
 
-}
-
-export default {
-  components: {SuccessDialog, CheckBox, SelectComponent},
-  data() {
-    return {checkboxValue, state, moviePloc, closeModal, submitHandler, openModal, isModalOpened}
-  }
 }
 
 watch(() => state.movieSaved, (val) => {

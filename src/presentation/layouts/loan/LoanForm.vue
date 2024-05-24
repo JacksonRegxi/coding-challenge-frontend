@@ -39,7 +39,7 @@ watch(() => state.error, (val) => {
 
 onMounted(() => {
   customerPloc.fetchCustomers()
-  loanPloc.fetchAvailableMovies()
+  loanPloc.fetchAvailableMovies(1)
 })
 
 </script>

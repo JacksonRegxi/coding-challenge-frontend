@@ -5,6 +5,7 @@ import {DataError} from "../../core/domain/DataError.ts";
 import {ILoanRepository} from "../../domain/repository/ILoanRepository.ts";
 import {CustomerMovie} from "../../domain/entities/loan/CustomerMovie.ts";
 import {Movie} from "../../domain/entities/movie";
+import {MovieReturn} from "../../domain/entities/loan/MovieReturn.ts";
 
 
 export class LoanRepository extends BaseRepository implements ILoanRepository  {
@@ -22,9 +23,18 @@ export class LoanRepository extends BaseRepository implements ILoanRepository  {
         }
     }
 
-    async fetchAvailableMoviesOnly(): Promise<Either<DataError, Array<Movie>>> {
+    async fetchAvailableMoviesOnly(is_available: number): Promise<Either<DataError, Array<Movie>>> {
         try {
-            const {data} = await this.axios.get(`/movies-available`);
+            const {data} = await this.axios.post(`/movies-available`, {is_available: is_available});
+            return Either.right(data);
+        } catch (error) {
+            return Either.left(this.handleErrors(error));
+        }
+    }
+
+    async storeMovieReturn(movieReturn: MovieReturn): Promise<Either<DataError, Boolean>> {
+        try {
+            const {data} = await this.axios.post(`/movies-return`, movieReturn);
             return Either.right(data);
         } catch (error) {
             return Either.left(this.handleErrors(error));

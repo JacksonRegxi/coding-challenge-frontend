@@ -10,6 +10,7 @@ export interface ILoanState {
     returnDate: string,
     movieId: string,
     loanSaved?: Boolean,
+    returnSuccess: Boolean,
     error?: string,
     serverError?: DataError,
     successStatus: boolean,

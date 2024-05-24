@@ -10,6 +10,7 @@ const loanState = defineStore('LoanState', {
             customerName: "",
             movieName: "",
             movieId: "",
+            returnSuccess: false,
             customerId: "",
             error: undefined,
             loanSaved: undefined,
