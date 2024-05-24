@@ -1,4 +1,4 @@
-<script>
+<script lang="ts" setup>
 
 import {ref, watch} from "vue";
 import {dependencyLocator} from "../../../core/dependicies/DependencyLocator.ts";
@@ -33,12 +33,6 @@ watch(() => state.error, (val) => {
   }
 })
 
-export default {
-  components: {SuccessDialog},
-  data() {
-    return {state, customerPloc, closeModal, submitHandler, openModal, isModalOpened}
-  }
-}
 
 </script>
 
