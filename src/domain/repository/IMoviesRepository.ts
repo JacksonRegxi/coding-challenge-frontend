@@ -5,4 +5,5 @@ import {Movie} from "../entities/movie";
 
 export interface IMoviesRepository {
     fetchMovies(): Promise<Either<DataError, Array<Movie>>>;
+    postMovie(movie: Movie): Promise<Either<DataError, Boolean>>;
 }

@@ -20,4 +20,16 @@ export class MovieRepository extends BaseRepository implements IMoviesRepository
             return Either.left(this.handleErrors(error));
         }
     }
+
+    async postMovie(movie: Movie): Promise<Either<DataError, Boolean>> {
+        try {
+            console.log(movie)
+            const {data} = await this.axios.post(`/store-movie`, movie)
+            console.log(`After request: ${data}`)
+            return Either.right(data)
+        } catch (error) {
+            console.log(`After request: ${error}`)
+            return Either.left(this.handleErrors(error))
+        }
+    }
 }

@@ -16,6 +16,7 @@ class CustomAxios {
 
         this.axiosInstance.interceptors.request.use(
             (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
+                config.headers["content-type"] = "multipart/form-data"
                 return config;
             },
             (error) => {

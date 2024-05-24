@@ -5,7 +5,14 @@ const movieState = defineStore('MovieState', {
     state: (): State => {
         return {
             movies: [],
+            title: "",
+            available: 0,
+            topic: "",
+            image: "",
+            releaseYear: 0,
+            summary: "",
             error: undefined,
+            movieSaved: undefined,
             serverError: undefined,
             successStatus: false,
         }
