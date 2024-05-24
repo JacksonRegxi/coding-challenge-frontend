@@ -14,6 +14,7 @@ import loanState, {LoanStore} from "../../presentation/bloc/loan/LoanState.ts";
 import {LoanBloc} from "../../presentation/bloc/loan/LoanBloc.ts";
 import {LoanRepository} from "../../data/repository/LoanRepository.ts";
 import {StoreLoanUseCase} from "../../domain/uses-cases/loan/StoreLoan.ts";
+import {FetchAvailableMoviesUseCase} from "../../domain/uses-cases/loan/FetchAvailableMovies.ts";
 
 const provAxiosInstance = () => {
     return new CustomAxios();
@@ -61,10 +62,12 @@ const provideLoanPloc = (store: LoanStore) => {
     const axios = provAxiosInstance();
     const loanRepository = new LoanRepository({ axios });
     const storeLoanUseCase = new StoreLoanUseCase({loanRepository: loanRepository});
+    const fetchAvailableMoviesUseCase = new FetchAvailableMoviesUseCase({loanRepository: loanRepository});
     return new LoanBloc({
         store: store,
         router,
-        storeLoanUseCase
+        storeLoanUseCase,
+        fetchAvailableMoviesUseCase
     });
 }
 

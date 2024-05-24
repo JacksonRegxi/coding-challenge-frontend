@@ -6,7 +6,7 @@ const loanState = defineStore('LoanState', {
         return {
             loanDate: "",
             returnDate: "",
-            customerMovies: [],
+            movies: [],
             customerName: "",
             movieName: "",
             movieId: "",

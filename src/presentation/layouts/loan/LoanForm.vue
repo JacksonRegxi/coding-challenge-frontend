@@ -1,17 +1,14 @@
 <script lang="ts" setup>
 import {onMounted, ref, watch} from "vue";
-import movieState from "../../bloc/movie/MovieState.ts";
 import customerState from "../../bloc/customer/CustomerState.ts";
 import {dependencyLocator} from "../../../core/dependicies/DependencyLocator.ts";
 import loanState from "../../bloc/loan/LoanState.ts";
 import SuccessDialog from "../../components/core/SuccessDialog.vue";
 
-const _movieState = movieState();
 const _customerState = customerState()
 const state = loanState()
 
 const customerPloc = dependencyLocator.provideCustomerPloc(_customerState)
-const moviePloc = dependencyLocator.provideMoviePloc(_movieState)
 const loanPloc = dependencyLocator.provideLoanPloc(state)
 
 const isModalOpened = ref(false);
@@ -42,7 +39,7 @@ watch(() => state.error, (val) => {
 
 onMounted(() => {
   customerPloc.fetchCustomers()
-  moviePloc.fetchMovies()
+  loanPloc.fetchAvailableMovies()
 })
 
 </script>
@@ -63,7 +60,7 @@ onMounted(() => {
           </label>
           <select v-model="(state.movieId)" name="movie" id="movie" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
             <option disabled class="font-semibold text-slate-300">Selecciona el titulo</option>
-            <option v-for="movie in _movieState.movies" :value="(movie.id)" class="font-semibold text-slate-300">{{movie.title}}</option>
+            <option v-for="movie in state.movies" :value="(movie.id)" class="font-semibold text-slate-950">{{movie.title}}</option>
           </select>
         </div>
         <div class="mb-5">
@@ -73,7 +70,7 @@ onMounted(() => {
 
           <select v-model="(state.customerId)" name="customer" id="customer" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
             <option disabled class="font-semibold text-slate-300">Selecciona el cliente</option>
-            <option v-for="customer in _customerState.customer" :value="(customer.id)" class="font-semibold text-slate-300">{{customer.customerName}}</option>
+            <option v-for="customer in _customerState.customer" :value="(customer.id)" class="font-semibold text-slate-950">{{customer.customerName}}</option>
           </select>
 
         </div>

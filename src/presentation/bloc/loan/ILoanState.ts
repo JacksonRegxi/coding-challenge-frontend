@@ -1,8 +1,8 @@
-import {CustomerMovie} from "../../../domain/entities/loan/CustomerMovie.ts";
 import {DataError} from "../../../core/domain/DataError.ts";
+import {Movie} from "../../../domain/entities/movie";
 
 export interface ILoanState {
-    customerMovies: Array<CustomerMovie>,
+    movies: Array<Movie>,
     customerName: string,
     movieName: string,
     customerId: string,

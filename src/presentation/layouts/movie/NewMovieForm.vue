@@ -70,9 +70,9 @@ watch(() => state.error, (val) => {
 
           <select v-model="(state.topic)" name="topic" id="topic" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
             <option disabled class="font-semibold text-slate-300">Selecciona el topic</option>
-            <option value="Terror" class="font-semibold text-slate-300">Terror</option>
-            <option value="Accion" class="font-semibold text-slate-300">Accion</option>
-            <option value="Comedia" class="font-semibold text-slate-300">Comedia</option>
+            <option value="Terror" class="font-semibold text-slate-950">Terror</option>
+            <option value="Accion" class="font-semibold text-slate-950">Accion</option>
+            <option value="Comedia" class="font-semibold text-slate-950">Comedia</option>
           </select>
 
         </div>
