@@ -93,50 +93,48 @@ export default {
                   d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
             </svg>
           </span>
-            TW Elements
+            Coding Challenge
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer
-            content. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit.
+            This is coding challenge where we apply clean architecture using VUE 3 + TypeScript
           </p>
         </div>
         <!-- Products section -->
         <div>
           <h6
               class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-            Products
+            Tools
           </h6>
           <p class="mb-4">
-            <a href="#!">Angular</a>
+            <a href="#!">TypeScript</a>
           </p>
           <p class="mb-4">
-            <a href="#!">React</a>
+            <a href="#!">Axios</a>
           </p>
           <p class="mb-4">
-            <a href="#!">Vue</a>
+            <a href="#!">Router View</a>
           </p>
           <p>
-            <a href="#!">Laravel</a>
+            <a href="#!">Ploc</a>
           </p>
         </div>
         <!-- Useful links section -->
         <div>
           <h6
               class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-            Useful links
+            Styling
           </h6>
           <p class="mb-4">
-            <a href="#!">Pricing</a>
+            <a href="#!">CSS</a>
           </p>
           <p class="mb-4">
-            <a href="#!">Settings</a>
+            <a href="#!">Tailwind</a>
           </p>
           <p class="mb-4">
-            <a href="#!">Orders</a>
+            <a href="#!">Vuetify</a>
           </p>
           <p>
-            <a href="#!">Help</a>
+            <a href="#!">Icon Vuew</a>
           </p>
         </div>
         <!-- Contact section -->
@@ -157,7 +155,7 @@ export default {
                   d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
             </svg>
           </span>
-            New York, NY 10012, US
+            Casa dos pisos, Reparto Julian Quintana 3era Etapa, Granada, 43000
           </p>
           <p class="mb-4 flex items-center justify-center md:justify-start">
           <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -171,7 +169,7 @@ export default {
                   d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
             </svg>
           </span>
-            info@example.com
+            info@regxi.com
           </p>
           <p class="mb-4 flex items-center justify-center md:justify-start">
           <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -185,7 +183,7 @@ export default {
                   clip-rule="evenodd" />
             </svg>
           </span>
-            + 01 234 567 88
+            + 505 8989 8944
           </p>
           <p class="flex items-center justify-center md:justify-start">
           <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -199,7 +197,7 @@ export default {
                   clip-rule="evenodd" />
             </svg>
           </span>
-            + 01 234 567 89
+            + N/A
           </p>
         </div>
       </div>
