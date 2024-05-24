@@ -27,7 +27,7 @@ onMounted(() => {
             <span class="">No disponible</span>
           </div>
           <span class="text-gray-400 mr-3 uppercase text-xs">{{movie.topic}}</span>
-          <p class="text-lg font-bold text-black truncate block capitalize">{{movie.title}}</p>
+          <p class="text-xl font-bold text-black line-clamp-2 block capitalize">{{movie.title}}</p>
           <div class="flex items-center">
             <p class="text-xs font-semibold text-black cursor-auto my-1 line-clamp-3">{{movie.summary}}</p>
             <div class="ml-auto">{{movie.releaseYear}}</div>

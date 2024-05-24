@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex text-gray-500 items-center">
-      <input type="checkbox" :id="id" aria-describedby="outlined_success_help" class="custom-checkbox" placeholder=""
+      <input type="checkbox" :name="id" :id="id" aria-describedby="outlined_success_help" class="custom-checkbox" placeholder=""
              :checked="checked" @input="updateInputValue" @blur="emitInputValue" :required="required" />
       <label v-if="label" :for="id" class="ml-2 text-gray-500 text-sm">{{ label }}</label>
     </div>
@@ -50,7 +50,7 @@ const emitInputValue = () => {
 <style>
 /* Define custom color variables */
 :root {
-  --checkbox-color: #209734;
+  --checkbox-color: red;
   --checkbox-tick-color: white;
 }
 
