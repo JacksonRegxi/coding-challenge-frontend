@@ -21,7 +21,6 @@ onMounted(() => {
         <th class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Apellido</th>
         <th class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Teléfono</th>
         <th class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Correo electrónico</th>
-        <th class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Acciones</th>
       </tr>
       </thead>
       <tbody class="bg-white divide-y divide-gray-200">
@@ -32,8 +31,8 @@ onMounted(() => {
         <td class="px-6 py-4 whitespace-nowrap">{{ customer.email }}</td>
         <td class="px-6 py-4 whitespace-nowrap">
           <button
-              class="px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out">
-            Edit
+              class="px-4 py-0.5 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out">
+            Editar
           </button>
         </td>
       </tr>

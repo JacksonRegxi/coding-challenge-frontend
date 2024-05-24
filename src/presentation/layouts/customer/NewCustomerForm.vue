@@ -38,8 +38,6 @@ watch(() => state.error, (val) => {
 
 <template>
   <div class="flex items-center justify-center p-12">
-    <!-- Author: FormBold Team -->
-    <!-- Learn More: https://formbold.com -->
     <div class="mx-auto w-full max-w-[550px] bg-white">
       <SuccessDialog :isOpen="isModalOpened" @modal-close="closeModal" @submit="submitHandler" :title="'Tarea completada'" :content="'El cliente se ha guardado exitosamente'"/>
       <form  onsubmit="return false;" @submit="customerPloc.storeCustomer({

@@ -5,5 +5,5 @@ export interface Movie {
     summary: string;
     releaseYear: number,
     topic: string,
-    available: string
+    available: number
 }

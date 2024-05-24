@@ -10,6 +10,10 @@ import {CustomerRepository} from "../../data/repository/CustomerRepository.ts";
 import {FetchCustomersUseCase} from "../../domain/uses-cases/customer/FetchCustomers.ts";
 import {StoreCustomerUseCase} from "../../domain/uses-cases/customer/StoreCustomer.ts";
 import {CustomerBloc} from "../../presentation/bloc/customer/CustomerBloc.ts";
+import loanState, {LoanStore} from "../../presentation/bloc/loan/LoanState.ts";
+import {LoanBloc} from "../../presentation/bloc/loan/LoanBloc.ts";
+import {LoanRepository} from "../../data/repository/LoanRepository.ts";
+import {StoreLoanUseCase} from "../../domain/uses-cases/loan/StoreLoan.ts";
 
 const provAxiosInstance = () => {
     return new CustomAxios();
@@ -49,7 +53,23 @@ const provideCustomerPloc = (store: CustomerStore) => {
     });
 }
 
+const provideLoanPloc = (store: LoanStore) => {
+    const router = useRouter()
+    if (!store) {
+        store = loanState();
+    }
+    const axios = provAxiosInstance();
+    const loanRepository = new LoanRepository({ axios });
+    const storeLoanUseCase = new StoreLoanUseCase({loanRepository: loanRepository});
+    return new LoanBloc({
+        store: store,
+        router,
+        storeLoanUseCase
+    });
+}
+
 export const dependencyLocator = {
     provideMoviePloc,
-    provideCustomerPloc
+    provideCustomerPloc,
+    provideLoanPloc
 }

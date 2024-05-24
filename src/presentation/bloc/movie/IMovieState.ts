@@ -9,7 +9,7 @@ export interface State {
     topic: string,
     image: string,
     summary: string,
-    available: string,
+    available: number,
     releaseYear: number,
     error?: string,
     serverError?: DataError,

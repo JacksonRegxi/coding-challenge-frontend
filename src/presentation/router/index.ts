@@ -28,7 +28,7 @@ const router = createRouter({
         },
         {
             path: '/loan-form',
-            name: 'Loan Form',
+            name: 'CustomerMovie Form',
             component: LoanForm
         },
         {
