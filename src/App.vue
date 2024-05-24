@@ -1,29 +1,25 @@
+<script setup lang="ts">
+import HeaderPage from "./presentation/components/core/Header.vue";
+import FooterPage from "./presentation/components/core/Footer.vue";
+</script>
+
 <template>
   <HeaderPage/>
   <router-view/>
-  <Footer/>
+  <FooterPage/>
 </template>
 
-<script>
-import HeaderPage from "@/presentation/components/core/Header.vue";
-import Footer from "@/presentation/components/core/Footer.vue";
-
-export default {
-  name: 'App',
-  components: {
-    Footer,
-    HeaderPage
-  }
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>

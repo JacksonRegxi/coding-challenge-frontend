@@ -1,12 +1,8 @@
-<script>
+<script lang="ts">
 
 export default {
   name: 'HeaderPage',
-  compatConfig: { MODE: 3 },
   methods: {
-    navigateToAbout() {
-      this.$router.push('/');
-    }
   }
 }
 
@@ -23,12 +19,12 @@ export default {
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" @click="navigateToAbout">Dashboard</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</a>
+                <router-link class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" to="/movies">Películas</router-link>
+                <router-link class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/customers">Clientes</router-link>
+                <router-link class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/movie-form">Añadir película</router-link>
+                <router-link class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/customer-form">Añadir cliente</router-link>
+                <router-link class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/loan-form">Hacer préstamo</router-link>
+                <router-link class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/return-movie-form">Devolución</router-link>
               </div>
             </div>
           </div>
