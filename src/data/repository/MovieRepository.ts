@@ -9,7 +9,7 @@ import {Movie} from "../../domain/entities/movie";
 export class MovieRepository extends BaseRepository implements IMoviesRepository  {
     constructor({ axios }: { axios: CustomAxios }) {
         super({axios});
-    };
+    }
 
 
     async fetchMovies(): Promise<Either<DataError, Array<Movie>>> {

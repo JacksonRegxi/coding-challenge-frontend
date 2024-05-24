@@ -1,7 +1,7 @@
 import type { Router } from "vue-router";
 import {DataError, ErrorFold} from "./domain/DataError";
 
-export class ploc<T> {
+export class Ploc<T> {
     public store: T;
     public router: Router;
 

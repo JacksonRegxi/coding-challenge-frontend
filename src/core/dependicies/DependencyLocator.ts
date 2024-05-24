@@ -1,16 +1,16 @@
 import CustomAxios from "../utils/CustomAxios";
 import {useRouter} from "vue-router";
+import {MovieRepository} from "../../data/repository/MovieRepository.ts";
+import {FetchMoviesUseCase} from "../../domain/uses-cases/FetchMovies.ts";
+import {MovieBloc} from "../../presentation/bloc/movie/MovieBloc.ts";
 import movieState, {MovieStore} from "../../presentation/bloc/movie/MovieState";
-import {MovieRepository} from "../../data/repository/MovieRepository";
-import {MovieBloc} from "../../presentation/bloc/movie/MovieBloc";
-import {FetchMoviesUseCase} from "../../domain/uses-cases/FetchMovies";
 
 const provAxiosInstance = () => {
     return new CustomAxios();
 }
 
 const provideMoviePloc = (store: MovieStore) => {
-    const router = useRouter();
+    const router = useRouter()
     if (!store) {
         store = movieState();
     }

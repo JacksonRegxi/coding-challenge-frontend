@@ -1,8 +1,7 @@
-<script>
+<script lang="ts">
 
 export default {
   name: 'HeaderPage',
-  compatConfig: { MODE: 3 },
   methods: {
   }
 }

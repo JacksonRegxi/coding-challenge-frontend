@@ -1,10 +1,9 @@
-import router from "../../router";
-import {ploc} from "../../../core/Ploc";
-import {FetchMoviesUseCase} from "../../../domain/uses-cases/FetchMovies";
 import {MovieStore} from "./MovieState";
 import {Router} from "vue-router";
+import {Ploc} from "../../../core/Ploc.ts";
+import {FetchMoviesUseCase} from "../../../domain/uses-cases/FetchMovies.ts";
 
-export class MovieBloc extends ploc<MovieStore> {
+export class MovieBloc extends Ploc<MovieStore> {
 
     private fetchMoviesUseCase: FetchMoviesUseCase;
 
@@ -27,6 +26,7 @@ export class MovieBloc extends ploc<MovieStore> {
             (error) => {
                 this.store.error = this.handleErrors(error);
             }, (data) => {
+                console.log(data);
                 this.store.movies = data
             });
     }

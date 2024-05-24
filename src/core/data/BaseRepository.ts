@@ -7,7 +7,7 @@ export class BaseRepository {
 
     constructor({ axios }: { axios: CustomAxios }) {
         this.axios = axios;
-    };
+    }
 
     handleErrors(error: AxiosError | any): DataError {
         if (error.response) {

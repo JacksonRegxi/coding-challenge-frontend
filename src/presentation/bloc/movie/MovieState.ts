@@ -1,26 +1,20 @@
-import {DataError} from "../../../core/domain/DataError";
-import {Movie} from "../../../domain/entities/movie";
-import {defineStore} from "pinia";
-
-interface State {
-    movies: Array<Movie> | null;
-    error?: string,
-    serverError?: DataError,
-    successStatus: boolean,
-}
-
+import {State} from "./IMovieState.ts";
+import {createPinia, defineStore, setActivePinia} from "pinia";
+setActivePinia(createPinia())
 const movieState = defineStore('MovieState', {
     state: (): State => {
         return {
-            movies: null,
+            movies: [],
             error: undefined,
             serverError: undefined,
             successStatus: false,
         }
     },
     getters: {},
-    actions: {}
-});
+    actions: {
+
+    }
+})
 
 export default movieState;
 
